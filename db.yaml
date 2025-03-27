@@ -2,7 +2,7 @@
   hosts: db
   become: yes
   vars:
-    login_hosts: db.ggopichand.online
+    login_host: db.ggopichand.online
   tasks: 
   - name: Install MySQL Server
     ansible.builtin.dnf:
@@ -15,7 +15,7 @@
       state: started
       enabled: yes
 
-  - name: istall python mysql dependices
+  - name: install python mysql dependices
     ansible.builtin.pip:
       name:
       - PyMySQL
