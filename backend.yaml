@@ -2,7 +2,8 @@
   hosts: backend
   become: yes
   vars:
-
+    login_host: db.gopichand.online
+    login_password: ExpenseApp@1
   tasks:
   - name: disable default nodejs
     ansible.builtin.command: dnf module disable nodejs -y
@@ -50,5 +51,8 @@
       name:
       - PyMySQL # to connect MySQL DB from Ansible
       - cryptography
-      executable: pip3.9    
+      executable: pip3.9   
+
+  - name: import data  into mysql    
+    c
 
