@@ -5,7 +5,7 @@
   - name: install nginx server
     ansible.builtin.dnf:
       name: nginx
-      state: started
+      state: latest
 
   - name: start and enable nginx
     ansible.builtin.service:
