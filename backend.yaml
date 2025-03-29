@@ -2,7 +2,7 @@
   become: yes
   hosts: backend
   vars:
-    login_host: db.gopichand.online
+    login_host: 172.31.21.49
     login_password: ExpenseApp@1
   tasks:
   - name: disable default nodejs
