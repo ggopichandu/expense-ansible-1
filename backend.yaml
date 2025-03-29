@@ -53,6 +53,5 @@
       - cryptography
       executable: pip3.9   
 
-  - name: import data  into mysql    
-    c
+
 
