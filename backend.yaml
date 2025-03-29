@@ -45,3 +45,10 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
+  - name: install python mysql dependices
+    ansible.builtin.pip:
+      name:
+      - PyMySQL # to connect MySQL DB from Ansible
+      - cryptography
+      executable: pip3.9    
+
